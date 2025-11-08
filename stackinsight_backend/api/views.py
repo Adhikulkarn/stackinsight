@@ -2,6 +2,7 @@ from rest_framework.decorators import api_view, parser_classes
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 import os, tempfile, zipfile, io, requests, shutil
+from analyzer.framework_detector import detect_frameworks
 
 @api_view(['POST'])
 @parser_classes([MultiPartParser, FormParser, JSONParser])
@@ -30,6 +31,8 @@ def analyze_github(request):
             z.extractall(temp_dir)
             extracted = os.path.join(temp_dir, f"{repo}-main")
 
+            
+
         # Case 2: Handle ZIP File Upload
         elif "file" in request.FILES:
             uploaded_file = request.FILES["file"]
@@ -49,9 +52,9 @@ def analyze_github(request):
         else:
             return Response({"error": "Provide either a repo_url or upload a zip file."}, status=400)
 
-        # (Placeholder until we connect the analyzers)
+        frameworks = detect_frameworks(extracted)
         demo_graph = {
-            "frameworks": ["Unknown"],
+            "frameworks": frameworks or ["Unknown"],
             "nodes": [{"id": "main.py", "language": "Python", "desc": "Sample file"}],
             "links": []
         }
