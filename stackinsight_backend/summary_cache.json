@@ -1,0 +1,105 @@
+{
+  "frontend_framework": "Vanilla HTML/CSS/JS",
+  "backend_framework": "None",
+  "frameworks": [
+    "Vanilla HTML/CSS/JS"
+  ],
+  "project_summary": "This project is a personal portfolio website for Aditya Kulkarni, a Computer Science Engineering student. Its primary purpose is to showcase his professional profile, education, technical skills, and projects to potential employers, collaborators, or anyone interested in his work.\n\n**Architecture:**\nThe architecture is that of a lean, client-side rendered static website, built entirely using standard web technologies (HTML, CSS, and JavaScript). It is designed as a multi-page application, with distinct HTML files for the main introduction and project listings, linked by a consistent navigation scheme. The design prioritizes visual engagement and user experience through a modern, dark-themed interface, heavily utilizing dynamic animations for entrances and interactive elements.\n\n**Main Components:**\n\n1.  **Core Content Modules (HTML):**\n    *   **Home Page (`index.html`):** Serves as the primary entry point, introducing Aditya Kulkarni, detailing his educational background, and listing his technical skill set.\n    *   **Projects Page (`projects.html`):** A dedicated section to display his various projects, providing a comprehensive view of his practical work.\n\n2.  **Styling and Theming (CSS):**\n    *   **Global/Home Styles (`style.css`):** Defines the overarching dark theme, utilizes flexbox for responsive layout, and incorporates a variety of entrance and interactive animations for the main portfolio/introduction page.\n    *   **Project-Specific Styles (`project.css`):** Extends or overrides the global styles, maintaining the dark background and incorporating further entrance and dynamic animations tailored for the projects page, alongside core styling for navigation and interactive UI elements within that context.\n\n3.  **Client-side Interactivity (JavaScript):**\n    *   **Event Handling and Navigation (`script.js`):** This script is the backbone of user interaction, attaching click event listeners to various UI elements. It manages internal navigation (e.g., to the home page, projects, or a resume link), external redirects to social media profiles, contact forms, email clients, and provides simple user feedback like an \"upcoming projects\" alert.\n\nThe project effectively combines structured content with engaging visual design and functional interactivity to present a professional online presence.",
+  "repository_graph": {
+    "name": "repository",
+    "summary": "This project is a personal portfolio website for Aditya Kulkarni, a Computer Science Engineering student. Its primary purpose is to showcase his professional profile, education, technical skills, and projects to potential employers, collaborators, or anyone interested in his work.\n\n**Architecture:**\nThe architecture is that of a lean, client-side rendered static website, built entirely using standard web technologies (HTML, CSS, and JavaScript). It is designed as a multi-page application, with distinct HTML files for the main introduction and project listings, linked by a consistent navigation scheme. The design prioritizes visual engagement and user experience through a modern, dark-themed interface, heavily utilizing dynamic animations for entrances and interactive elements.\n\n**Main Components:**\n\n1.  **Core Content Modules (HTML):**\n    *   **Home Page (`index.html`):** Serves as the primary entry point, introducing Aditya Kulkarni, detailing his educational background, and listing his technical skill set.\n    *   **Projects Page (`projects.html`):** A dedicated section to display his various projects, providing a comprehensive view of his practical work.\n\n2.  **Styling and Theming (CSS):**\n    *   **Global/Home Styles (`style.css`):** Defines the overarching dark theme, utilizes flexbox for responsive layout, and incorporates a variety of entrance and interactive animations for the main portfolio/introduction page.\n    *   **Project-Specific Styles (`project.css`):** Extends or overrides the global styles, maintaining the dark background and incorporating further entrance and dynamic animations tailored for the projects page, alongside core styling for navigation and interactive UI elements within that context.\n\n3.  **Client-side Interactivity (JavaScript):**\n    *   **Event Handling and Navigation (`script.js`):** This script is the backbone of user interaction, attaching click event listeners to various UI elements. It manages internal navigation (e.g., to the home page, projects, or a resume link), external redirects to social media profiles, contact forms, email clients, and provides simple user feedback like an \"upcoming projects\" alert.\n\nThe project effectively combines structured content with engaging visual design and functional interactivity to present a professional online presence.",
+    "files": [
+      {
+        "name": "style.css",
+        "summary": "This stylesheet defines a dark-themed, flexbox-based layout for a portfolio or introduction page, heavily utilizing various entrance and interactive animations.",
+        "functions": [],
+        "classes": []
+      },
+      {
+        "name": "script.js",
+        "summary": "This script attaches click event listeners to various UI elements, redirecting users to social media profiles, contact forms, email, an \"upcoming projects\" alert, and the homepage.",
+        "functions": [
+          {
+            "name": "home",
+            "summary": "The `home` function likely **navigates the user's browser to the main page** of the website. It achieves this by setting `window.location.href` to `\"index.html\"`, which is a common convention for a site's primary landing page. This aligns with the surrounding code, which also uses `window.location.href` for various other navigations (to LinkedIn, GitHub, etc.) when elements are clicked."
+          }
+        ],
+        "classes": []
+      },
+      {
+        "name": "projects.html",
+        "summary": "This HTML defines a \"Projects\" page featuring a navigation bar with links to a portfolio, a resume, and a home action, styled by `project.css` and enhanced by `script.js`.",
+        "functions": [],
+        "classes": []
+      },
+      {
+        "name": "project.css",
+        "summary": "This stylesheet defines a dark background, a range of entrance and dynamic animations, and core styles for navigation and interactive UI elements.",
+        "functions": [],
+        "classes": []
+      },
+      {
+        "name": "index.html",
+        "summary": "This HTML document functions as Aditya Kulkarni's personal portfolio home page, introducing himself as a Computer Science Engineering student, detailing his education, and listing his technical skills.",
+        "functions": [],
+        "classes": []
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "repository",
+      "label": "main-portfolio-main"
+    },
+    {
+      "id": "style.css",
+      "label": "style.css"
+    },
+    {
+      "id": "script.js",
+      "label": "script.js"
+    },
+    {
+      "id": "home",
+      "label": "home"
+    },
+    {
+      "id": "projects.html",
+      "label": "projects.html"
+    },
+    {
+      "id": "project.css",
+      "label": "project.css"
+    },
+    {
+      "id": "index.html",
+      "label": "index.html"
+    }
+  ],
+  "links": [
+    {
+      "source": "repository",
+      "target": "style.css"
+    },
+    {
+      "source": "repository",
+      "target": "script.js"
+    },
+    {
+      "source": "script.js",
+      "target": "home"
+    },
+    {
+      "source": "repository",
+      "target": "projects.html"
+    },
+    {
+      "source": "repository",
+      "target": "project.css"
+    },
+    {
+      "source": "repository",
+      "target": "index.html"
+    }
+  ]
+}
