@@ -212,7 +212,7 @@ export default function LandingPage() {
           <p className="cta-description">
             Join the smart developers who use StackInsight to understand code faster
           </p>
-          <a href="#analyze" className="cta-button">
+          <a href="/analyze" className="cta-button">
             Get Started Free
           </a>
         </motion.div>
